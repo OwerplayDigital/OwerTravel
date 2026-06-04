@@ -262,22 +262,49 @@
        HERO
     ========================= */
     .hero {
-      min-height: 470px;
+      min-height: 500px;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
       color: var(--white);
-      background:
-        linear-gradient(90deg, rgba(15,23,42,0.86), rgba(15,23,42,0.56), rgba(15,23,42,0.20)),
-        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=85") center/cover no-repeat;
+      background: var(--dark-blue);
+    }
+
+    .hero-slider {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transform: scale(1.04);
+      transition: opacity 1.4s ease, transform 6s ease;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(90deg, rgba(15,23,42,0.88), rgba(15,23,42,0.58), rgba(15,23,42,0.22));
     }
 
     .hero::after {
       content: "";
       position: absolute;
       inset: auto 0 0 0;
-      height: 180px;
+      z-index: 1;
+      height: 160px;
       background: linear-gradient(to top, rgba(15,23,42,0.45), transparent);
       pointer-events: none;
     }
@@ -285,7 +312,7 @@
     .hero-content {
       position: relative;
       z-index: 2;
-      padding-top: 0;
+      padding-top: 20px;
       max-width: 780px;
     }
 
@@ -323,19 +350,18 @@
     }
 
     .trust-list {
-      display: grid;
-      grid-template-columns: repeat(2, 315px);
+      display: flex;
+      flex-wrap: wrap;
       gap: 12px;
-      align-items: center;
+      max-width: 760px;
     }
 
     .trust-item {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      width: 315px;
-      min-height: 50px;
+      width: auto;
       color: rgba(255,255,255,0.9);
       font-weight: 700;
       font-size: 0.9rem;
@@ -344,6 +370,7 @@
       background: rgba(255,255,255,0.10);
       border: 1px solid rgba(255,255,255,0.16);
       text-align: center;
+      backdrop-filter: blur(12px);
     }
 
     .trust-item i {
@@ -1163,10 +1190,7 @@
       }
 
       .hero {
-        min-height: 510px;
-        background:
-          linear-gradient(rgba(15,23,42,0.74), rgba(15,23,42,0.80)),
-          url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1300&q=80") center/cover no-repeat;
+        min-height: 540px;
       }
 
       .hero-content {
@@ -1178,18 +1202,30 @@
       }
 
       .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
+        display: none;
       }
 
       .trust-list {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 10px;
       }
 
       .trust-item {
         width: 100%;
+        border-radius: 18px;
       }
 
+      .trust-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .trust-item {
+        width: 100%;
+        border-radius: 18px;
+      }
 
       .btn {
         width: 100%;
@@ -1290,6 +1326,13 @@
 
   <!-- SEÇÃO 1 — HERO -->
   <section class="hero" id="inicio">
+    <div class="hero-slider" aria-hidden="true">
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2200&q=85')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2200&q=85')"></div>
+      <div class="hero-slide" style="background-image:url('https://i.postimg.cc/KjMVq7cN/pisa.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('https://i.postimg.cc/nrD5RKV2/costa.jpg')"></div>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge fade-in">
@@ -1313,7 +1356,7 @@
 
         <div class="trust-list slide-up">
           <div class="trust-item"><i class="fa-solid fa-check"></i> Atendimento Personalizado</div>
-          <div class="trust-item"><i class="fa-solid fa-check"></i> Suporte Antes, Durante e Após a Viagem</div>
+          <div class="trust-item"><i class="fa-solid fa-check"></i> Suporte Completo em Toda a Viagem</div>
           <div class="trust-item"><i class="fa-solid fa-check"></i> Pacotes Nacionais e Internacionais</div>
           <div class="trust-item"><i class="fa-solid fa-check"></i> Atendimento Online para Todo o Brasil</div>
         </div>
@@ -1675,7 +1718,7 @@
     </div>
   </section>
 
-  <!-- SEÇÃO 9 — ATENDIMENTO ONLINE -->
+  <!-- SEÇÃO 9 — LOCALIZAÇÃO E CONTATO -->
   <section class="contact" id="contato">
     <div class="container">
       <div class="section-head reveal">
@@ -1853,6 +1896,21 @@
         }
       });
     });
+
+
+    /* =========================
+       HERO SLIDER
+    ========================= */
+    const heroSlides = document.querySelectorAll(".hero-slide");
+    let currentHeroSlide = 0;
+
+    if (heroSlides.length > 1) {
+      setInterval(() => {
+        heroSlides[currentHeroSlide].classList.remove("active");
+        currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+        heroSlides[currentHeroSlide].classList.add("active");
+      }, 5200);
+    }
 
     /* =========================
        SCROLL REVEAL
