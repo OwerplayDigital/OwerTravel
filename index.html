@@ -268,35 +268,9 @@
       position: relative;
       overflow: hidden;
       color: var(--white);
-      background: var(--dark-blue);
-    }
-
-    .hero-slider {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-
-    .hero-slide {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transform: scale(1.04);
-      transition: opacity 1.4s ease, transform 6s ease;
-    }
-
-    .hero-slide.active {
-      opacity: 1;
-      transform: scale(1.1);
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background: linear-gradient(90deg, rgba(15,23,42,0.88), rgba(15,23,42,0.58), rgba(15,23,42,0.22));
+      background:
+        linear-gradient(90deg, rgba(15,23,42,0.88), rgba(15,23,42,0.58), rgba(15,23,42,0.22)),
+        url("assets/hero-pisa.jpg") center/cover no-repeat;
     }
 
     .hero::after {
@@ -346,7 +320,10 @@
     }
 
     .hero-actions {
-      display: none;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
     }
 
     .trust-list {
@@ -1191,6 +1168,9 @@
 
       .hero {
         min-height: 540px;
+        background:
+          linear-gradient(rgba(15,23,42,0.76), rgba(15,23,42,0.82)),
+          url("assets/hero-pisa.jpg") center/cover no-repeat;
       }
 
       .hero-content {
@@ -1202,7 +1182,8 @@
       }
 
       .hero-actions {
-        display: none;
+        flex-direction: column;
+        align-items: stretch;
       }
 
       .trust-list {
@@ -1326,13 +1307,6 @@
 
   <!-- SEÇÃO 1 — HERO -->
   <section class="hero" id="inicio">
-    <div class="hero-slider" aria-hidden="true">
-      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2200&q=85')"></div>
-      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2200&q=85')"></div>
-      <div class="hero-slide" style="background-image:url('https://i.postimg.cc/KjMVq7cN/pisa.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('https://i.postimg.cc/nrD5RKV2/costa.jpg')"></div>
-    </div>
-    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge fade-in">
@@ -1344,7 +1318,7 @@
 
         <p class="slide-up">
           Planejamos cada detalhe para que você viva experiências inesquecíveis com conforto,
-          segurança e tranquilidade.
+          segurança e tranquilidade
         </p>
 
         <div class="hero-actions slide-up">
@@ -1727,7 +1701,7 @@
           <h2 class="section-title">Atendimento Online para Todo o Brasil</h2>
         </div>
         <p class="section-desc">
-          Atendemos clientes de qualquer lugar do Brasil com suporte completo antes, durante e após a viagem.
+          Atendemos clientes de qualquer lugar do Brasil com suporte completo antes, durante e após a viagem
         </p>
       </div>
 
@@ -1781,7 +1755,7 @@
   <section class="final-cta">
     <div class="container reveal">
       <h2>Pronto Para Viver Sua Próxima Experiência?</h2>
-      <p>Fale agora com nossa equipe e receba um orçamento personalizado.</p>
+      <p>Fale agora com nossa equipe e receba um orçamento personalizado</p>
       <a class="btn btn-primary" href="https://wa.me/5519991247894" target="_blank" rel="noopener">
         <i class="fa-brands fa-whatsapp"></i>
         Solicitar Orçamento
@@ -1896,22 +1870,6 @@
         }
       });
     });
-
-
-    /* =========================
-       HERO SLIDER
-    ========================= */
-    const heroSlides = document.querySelectorAll(".hero-slide");
-    let currentHeroSlide = 0;
-
-    if (heroSlides.length > 1) {
-      setInterval(() => {
-        heroSlides[currentHeroSlide].classList.remove("active");
-        currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
-        heroSlides[currentHeroSlide].classList.add("active");
-      }, 5200);
-    }
-
     /* =========================
        SCROLL REVEAL
     ========================= */
