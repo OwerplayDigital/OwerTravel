@@ -320,10 +320,42 @@
     }
 
     .hero-actions {
-      display: flex;
-      gap: 14px;
+      display: none;
+    }
+
+    .hero-topline {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
       flex-wrap: wrap;
-      margin-bottom: 26px;
+    }
+
+    .hero-topline .hero-badge {
+      margin-bottom: 0;
+    }
+
+    .hero-mini-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 42px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--white);
+      font-size: 0.88rem;
+      font-weight: 800;
+      box-shadow: 0 12px 30px rgba(22, 163, 74, 0.28);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .hero-mini-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 38px rgba(22, 163, 74, 0.34);
+      filter: brightness(1.04);
     }
 
     .trust-list {
@@ -513,6 +545,14 @@
     .destination-body .btn {
       margin-top: auto;
     }
+
+    .destination-body .btn-blue {
+      min-height: 44px;
+      padding: 0 18px;
+      font-size: 0.86rem;
+      gap: 8px;
+    }
+
 
     /* =========================
        COMO FUNCIONA
@@ -1189,6 +1229,19 @@
         padding-top: 20px;
       }
 
+      .hero-topline {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .hero-mini-cta {
+        width: 100%;
+        min-height: 48px;
+      }
+
+
       .hero h1 {
         font-size: clamp(3.2rem, 15vw, 4.8rem);
       }
@@ -1321,9 +1374,16 @@
   <section class="hero" id="inicio">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge fade-in">
-          <i class="fa-solid fa-gem"></i>
-          Experiências personalizadas para viajar melhor
+        <div class="hero-topline fade-in">
+          <div class="hero-badge">
+            <i class="fa-solid fa-gem"></i>
+            Experiências personalizadas para viajar melhor
+          </div>
+
+          <a class="hero-mini-cta" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            Solicitar Orçamento
+          </a>
         </div>
 
         <h1 class="slide-up">Sua Próxima Viagem Começa Aqui</h1>
@@ -1333,14 +1393,7 @@
           segurança e tranquilidade
         </p>
 
-        <div class="hero-actions slide-up">
-          <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp"></i>
-            Solicitar Orçamento
-          </a>
-        </div>
-
-        <div class="trust-list slide-up">
+<div class="trust-list slide-up">
           <div class="trust-item"><i class="fa-solid fa-check"></i> Atendimento Personalizado</div>
           <div class="trust-item"><i class="fa-solid fa-check"></i> Suporte Completo em Toda a Viagem</div>
           <div class="trust-item"><i class="fa-solid fa-check"></i> Pacotes Nacionais e Internacionais</div>
@@ -1415,7 +1468,7 @@
           <div class="destination-body">
             <h3>Maceió</h3>
             <p>Mar cristalino, piscinas naturais e hospedagens perfeitas para descansar com conforto.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20uma%20viagem%20para%20Macei%C3%B3.%20Pode%20me%20passar%20uma%20proposta%20personalizada%3F" target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
         <article class="destination-card reveal">
@@ -1424,9 +1477,9 @@
             <span>Europa clássica</span>
           </div>
           <div class="destination-body">
-            <h3>Pisa</h3>
-            <p>Um dos destinos mais icônicos da Itália, perfeito para roteiros internacionais cheios de história.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <h3>Itália</h3>
+            <p>Roteiros pela Itália com cidades históricas, paisagens marcantes e experiências inesquecíveis pela Europa.</p>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20uma%20viagem%20para%20a%20It%C3%A1lia.%20Pode%20me%20passar%20uma%20proposta%20personalizada%3F" target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
         <article class="destination-card reveal">
@@ -1437,7 +1490,7 @@
           <div class="destination-body">
             <h3>Cruzeiros</h3>
             <p>Conforto, entretenimento, gastronomia e vários destinos em uma única viagem.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20cruzeiros.%20Pode%20me%20passar%20uma%20proposta%20personalizada%3F" target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
         <article class="destination-card reveal">
@@ -1448,7 +1501,7 @@
           <div class="destination-body">
             <h3>Porto Seguro</h3>
             <p>Diversão, praias, resorts e experiências ideais para viagens em família.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20uma%20viagem%20para%20Porto%20Seguro.%20Pode%20me%20passar%20uma%20proposta%20personalizada%3F" target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
         <article class="destination-card reveal">
@@ -1459,7 +1512,7 @@
           <div class="destination-body">
             <h3>Gramado</h3>
             <p>Clima europeu, gastronomia, romantismo e passeios para todas as idades.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20uma%20viagem%20para%20Gramado.%20Pode%20me%20passar%20uma%20proposta%20personalizada%3F" target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
         <article class="destination-card reveal">
@@ -1470,7 +1523,7 @@
           <div class="destination-body">
             <h3>Rio de Janeiro</h3>
             <p>Paisagens marcantes, experiências culturais e roteiros personalizados para todos os estilos.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20uma%20viagem%20para%20o%20Rio%20de%20Janeiro.%20Pode%20me%20passar%20uma%20proposta%20personalizada%3F" target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
         <article class="destination-card reveal">
@@ -1481,7 +1534,7 @@
           <div class="destination-body">
             <h3>Dubai</h3>
             <p>Arquitetura impressionante, experiências exclusivas e uma viagem marcada por sofisticação.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20uma%20viagem%20para%20Dubai.%20Pode%20me%20passar%20uma%20proposta%20personalizada%3F" target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
         <article class="destination-card reveal">
@@ -1492,7 +1545,7 @@
           <div class="destination-body">
             <h3>Lisboa</h3>
             <p>História, gastronomia, charme europeu e uma das portas de entrada mais procuradas por brasileiros.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20uma%20viagem%20para%20Lisboa/Portugal.%20Pode%20me%20passar%20uma%20proposta%20personalizada%3F" target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
         <article class="destination-card reveal">
@@ -1503,7 +1556,7 @@
           <div class="destination-body">
             <h3>Cancún</h3>
             <p>Resorts all inclusive, águas caribenhas e experiências inesquecíveis para casais e famílias.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20uma%20viagem%20para%20Canc%C3%BAn.%20Pode%20me%20passar%20uma%20proposta%20personalizada%3F" target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
       </div>
@@ -1707,7 +1760,7 @@
           <div class="package-body">
             <h3>Lua de Mel</h3>
             <p>Viagens românticas com hospedagens especiais, experiências memoráveis e clima perfeito para celebrar</p>
-            <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20pacote%20de%20Lua%20de%20Mel.%20Pode%20me%20passar%20uma%20proposta%20personalizada%3F" target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
 
@@ -1716,7 +1769,7 @@
           <div class="package-body">
             <h3>Férias em Família</h3>
             <p>Pacotes pensados para conforto, diversão, segurança e praticidade para todas as idades</p>
-            <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20F%C3%A9rias%20em%20Fam%C3%ADlia.%20Pode%20me%20passar%20uma%20proposta%20personalizada%3F" target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
 
@@ -1725,7 +1778,7 @@
           <div class="package-body">
             <h3>Viagens Internacionais</h3>
             <p>Roteiros para quem deseja conhecer novos países com orientação, planejamento e suporte</p>
-            <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20Viagens%20Internacionais.%20Pode%20me%20passar%20uma%20proposta%20personalizada%3F" target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
       </div>
