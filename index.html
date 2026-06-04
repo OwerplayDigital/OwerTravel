@@ -4,12 +4,12 @@
   <!-- SEO BÁSICO -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="OWERTRAVEL - Agência de viagens especializada em pacotes nacionais, internacionais, lua de mel, férias em família, cruzeiros e experiências personalizadas." />
-  <meta name="keywords" content="agência de viagens, OWERTRAVEL, pacotes de viagem, lua de mel, cruzeiros, férias, viagens internacionais, orçamento de viagem" />
-  <meta name="author" content="OWERTRAVEL" />
+  <meta name="description" content="OwerTravel - Agência de viagens especializada em pacotes nacionais, internacionais, lua de mel, férias em família, cruzeiros e experiências personalizadas." />
+  <meta name="keywords" content="agência de viagens, OwerTravel, pacotes de viagem, lua de mel, cruzeiros, férias, viagens internacionais, orçamento de viagem" />
+  <meta name="author" content="OwerTravel" />
   <meta name="theme-color" content="#0F172A" />
 
-  <title>OWERTRAVEL | Sua Próxima Viagem Começa Aqui</title>
+  <title>OwerTravel | Sua Próxima Viagem Começa Aqui</title>
 
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -320,42 +320,10 @@
     }
 
     .hero-actions {
-      display: none;
-    }
-
-    .hero-topline {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 24px;
+      display: flex;
+      gap: 14px;
       flex-wrap: wrap;
-    }
-
-    .hero-topline .hero-badge {
-      margin-bottom: 0;
-    }
-
-    .hero-mini-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      min-height: 42px;
-      padding: 0 18px;
-      border-radius: 999px;
-      background: var(--green);
-      color: var(--white);
-      font-size: 0.88rem;
-      font-weight: 800;
-      box-shadow: 0 12px 30px rgba(22, 163, 74, 0.28);
-      transition: var(--transition);
-      white-space: nowrap;
-    }
-
-    .hero-mini-cta:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 38px rgba(22, 163, 74, 0.34);
-      filter: brightness(1.04);
+      margin-bottom: 26px;
     }
 
     .trust-list {
@@ -471,6 +439,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
+      align-items: stretch;
     }
 
     .destination-card {
@@ -480,6 +449,9 @@
       border: 1px solid var(--border);
       box-shadow: var(--shadow-soft);
       transition: var(--transition);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     .destination-card:hover {
@@ -519,6 +491,10 @@
 
     .destination-body {
       padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     .destination-body h3 {
@@ -532,6 +508,10 @@
       color: var(--muted);
       margin-bottom: 20px;
       font-size: 0.95rem;
+    }
+
+    .destination-body .btn {
+      margin-top: auto;
     }
 
     /* =========================
@@ -1209,19 +1189,6 @@
         padding-top: 20px;
       }
 
-      .hero-topline {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .hero-mini-cta {
-        width: 100%;
-        min-height: 48px;
-      }
-
-
       .hero h1 {
         font-size: clamp(3.2rem, 15vw, 4.8rem);
       }
@@ -1331,9 +1298,9 @@
   <!-- HEADER -->
   <header class="header" id="header">
     <nav class="nav">
-      <a href="javascript:void(0)" data-scroll="inicio" class="logo" aria-label="OWERTRAVEL">
+      <a href="javascript:void(0)" data-scroll="inicio" class="logo" aria-label="OwerTravel">
         <span class="logo-mark"><i class="fa-solid fa-plane-departure"></i></span>
-        <span><strong>OWER</strong>TRAVEL</span>
+        <span><strong>Ower</strong>Travel</span>
       </a>
 
       <div class="menu" id="menu">
@@ -1354,16 +1321,9 @@
   <section class="hero" id="inicio">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-topline fade-in">
-          <div class="hero-badge">
-            <i class="fa-solid fa-gem"></i>
-            Experiências personalizadas para viajar melhor
-          </div>
-
-          <a class="hero-mini-cta" href="https://wa.me/5519991247894" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp"></i>
-            Solicitar Orçamento
-          </a>
+        <div class="hero-badge fade-in">
+          <i class="fa-solid fa-gem"></i>
+          Experiências personalizadas para viajar melhor
         </div>
 
         <h1 class="slide-up">Sua Próxima Viagem Começa Aqui</h1>
@@ -1373,7 +1333,14 @@
           segurança e tranquilidade
         </p>
 
-<div class="trust-list slide-up">
+        <div class="hero-actions slide-up">
+          <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            Solicitar Orçamento
+          </a>
+        </div>
+
+        <div class="trust-list slide-up">
           <div class="trust-item"><i class="fa-solid fa-check"></i> Atendimento Personalizado</div>
           <div class="trust-item"><i class="fa-solid fa-check"></i> Suporte Completo em Toda a Viagem</div>
           <div class="trust-item"><i class="fa-solid fa-check"></i> Pacotes Nacionais e Internacionais</div>
@@ -1383,12 +1350,12 @@
     </div>
   </section>
 
-  <!-- SEÇÃO 2 — POR QUE VIAJAR COM A OWERTRAVEL -->
+  <!-- SEÇÃO 2 — POR QUE VIAJAR COM A OwerTravel -->
   <section class="features">
     <div class="container">
       <div class="section-head reveal">
         <div>
-          <div class="section-kicker">Por que escolher a OWERTRAVEL</div>
+          <div class="section-kicker">Por que escolher a OwerTravel</div>
           <h2 class="section-title">Viajar deve ser leve, seguro e inesquecível</h2>
         </div>
         <p class="section-desc">
@@ -1448,46 +1415,9 @@
           <div class="destination-body">
             <h3>Maceió</h3>
             <p>Mar cristalino, piscinas naturais e hospedagens perfeitas para descansar com conforto.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894" target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
-
-        <article class="destination-card reveal">
-          <div class="destination-img">
-            <img src="https://i.postimg.cc/c1RysrHf/portoseguro.jpg" alt="Resort tropical representando Porto Seguro" loading="lazy">
-            <span>Família e lazer</span>
-          </div>
-          <div class="destination-body">
-            <h3>Porto Seguro</h3>
-            <p>Diversão, praias, resorts e experiências ideais para viagens em família.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894" target="_blank" rel="noopener">Solicitar Orçamento</a>
-          </div>
-        </article>
-
-        <article class="destination-card reveal">
-          <div class="destination-img">
-            <img src="https://i.postimg.cc/7LGdjLdg/gramado.jpg" alt="Cidade charmosa de serra representando Gramado" loading="lazy">
-            <span>Charme e romance</span>
-          </div>
-          <div class="destination-body">
-            <h3>Gramado</h3>
-            <p>Clima europeu, gastronomia, romantismo e passeios para todas as idades.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894" target="_blank" rel="noopener">Solicitar Orçamento</a>
-          </div>
-        </article>
-
-        <article class="destination-card reveal">
-          <div class="destination-img">
-            <img src="https://i.postimg.cc/1zn2bz27/cancun.jpg" alt="Mar azul caribenho representando Cancún" loading="lazy">
-            <span>Internacional</span>
-          </div>
-          <div class="destination-body">
-            <h3>Cancún</h3>
-            <p>Resorts all inclusive, águas caribenhas e experiências inesquecíveis para casais e famílias.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894" target="_blank" rel="noopener">Solicitar Orçamento</a>
-          </div>
-        </article>
-
         <article class="destination-card reveal">
           <div class="destination-img">
             <img src="https://i.postimg.cc/KjMVq7cN/pisa.jpg" alt="Torre de Pisa na Itália" loading="lazy">
@@ -1496,10 +1426,42 @@
           <div class="destination-body">
             <h3>Pisa</h3>
             <p>Um dos destinos mais icônicos da Itália, perfeito para roteiros internacionais cheios de história.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894" target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
-
+        <article class="destination-card reveal">
+          <div class="destination-img">
+            <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1000&q=85" alt="Cruzeiro em alto mar" loading="lazy">
+            <span>Experiência completa</span>
+          </div>
+          <div class="destination-body">
+            <h3>Cruzeiros</h3>
+            <p>Conforto, entretenimento, gastronomia e vários destinos em uma única viagem.</p>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+          </div>
+        </article>
+        <article class="destination-card reveal">
+          <div class="destination-img">
+            <img src="https://i.postimg.cc/c1RysrHf/portoseguro.jpg" alt="Resort tropical representando Porto Seguro" loading="lazy">
+            <span>Família e lazer</span>
+          </div>
+          <div class="destination-body">
+            <h3>Porto Seguro</h3>
+            <p>Diversão, praias, resorts e experiências ideais para viagens em família.</p>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+          </div>
+        </article>
+        <article class="destination-card reveal">
+          <div class="destination-img">
+            <img src="https://i.postimg.cc/7LGdjLdg/gramado.jpg" alt="Cidade charmosa de serra representando Gramado" loading="lazy">
+            <span>Charme e romance</span>
+          </div>
+          <div class="destination-body">
+            <h3>Gramado</h3>
+            <p>Clima europeu, gastronomia, romantismo e passeios para todas as idades.</p>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+          </div>
+        </article>
         <article class="destination-card reveal">
           <div class="destination-img">
             <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1000&q=85" alt="Rio de Janeiro com paisagem turística" loading="lazy">
@@ -1508,7 +1470,40 @@
           <div class="destination-body">
             <h3>Rio de Janeiro</h3>
             <p>Paisagens marcantes, experiências culturais e roteiros personalizados para todos os estilos.</p>
-            <a class="btn btn-blue" href="https://wa.me/5519991247894" target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+          </div>
+        </article>
+        <article class="destination-card reveal">
+          <div class="destination-img">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=85" alt="Dubai com skyline moderno" loading="lazy">
+            <span>Luxo internacional</span>
+          </div>
+          <div class="destination-body">
+            <h3>Dubai</h3>
+            <p>Arquitetura impressionante, experiências exclusivas e uma viagem marcada por sofisticação.</p>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+          </div>
+        </article>
+        <article class="destination-card reveal">
+          <div class="destination-img">
+            <img src="https://images.unsplash.com/photo-1548707309-dcebeab9ea9b?auto=format&fit=crop&w=1000&q=85" alt="Lisboa em Portugal" loading="lazy">
+            <span>Portugal</span>
+          </div>
+          <div class="destination-body">
+            <h3>Lisboa</h3>
+            <p>História, gastronomia, charme europeu e uma das portas de entrada mais procuradas por brasileiros.</p>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+          </div>
+        </article>
+        <article class="destination-card reveal">
+          <div class="destination-img">
+            <img src="https://i.postimg.cc/1zn2bz27/cancun.jpg" alt="Mar azul caribenho representando Cancún" loading="lazy">
+            <span>Internacional</span>
+          </div>
+          <div class="destination-body">
+            <h3>Cancún</h3>
+            <p>Resorts all inclusive, águas caribenhas e experiências inesquecíveis para casais e famílias.</p>
+            <a class="btn btn-blue" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
       </div>
@@ -1573,15 +1568,15 @@
     </div>
   </section>
 
-  <!-- SEÇÃO 5 — SOBRE A OWERTRAVEL -->
+  <!-- SEÇÃO 5 — SOBRE A OwerTravel -->
   <section class="about" id="sobre">
     <div class="container">
       <div class="about-wrap">
         <div class="about-text reveal">
-          <div class="section-kicker">Sobre a OWERTRAVEL</div>
+          <div class="section-kicker">Sobre a OwerTravel</div>
           <h2 class="section-title">Atendimento humanizado para transformar planos em experiências reais</h2>
           <p>
-            A OWERTRAVEL nasceu para simplificar o planejamento de viagens e oferecer uma experiência
+            A OwerTravel nasceu para simplificar o planejamento de viagens e oferecer uma experiência
             mais segura, acolhedora e personalizada para cada cliente.
           </p>
           <p>
@@ -1596,9 +1591,9 @@
             <li><i class="fa-solid fa-circle-check"></i> Comunicação clara e suporte próximo em todas as etapas</li>
           </ul>
 
-          <a class="btn btn-primary" href="https://wa.me/5519991247894" target="_blank" rel="noopener">
+          <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20atendimento%20online%20da%20OwerTravel%20para%20planejar%20minha%20pr%C3%B3xima%20viagem." target="_blank" rel="noopener">
             <i class="fa-brands fa-whatsapp"></i>
-            Conversar com a OWERTRAVEL
+            Conversar com a OwerTravel
           </a>
         </div>
 
@@ -1620,7 +1615,7 @@
           <h2 class="section-title">Quem viaja bem, recomenda</h2>
         </div>
         <p class="section-desc">
-          Relatos de clientes que confiaram na OWERTRAVEL para planejar férias, lua de mel
+          Relatos de clientes que confiaram na OwerTravel para planejar férias, lua de mel
           e momentos especiais.
         </p>
       </div>
@@ -1637,7 +1632,7 @@
 
         <article class="testimonial-card reveal">
           <div class="stars">★★★★★</div>
-          <p>“Fechamos nossa lua de mel com a OWERTRAVEL e recebemos um atendimento muito próximo. Foi exatamente como imaginávamos.”</p>
+          <p>“Fechamos nossa lua de mel com a OwerTravel e recebemos um atendimento muito próximo. Foi exatamente como imaginávamos.”</p>
           <div class="client">
             <strong>Rafael e Camila</strong>
             <span>Rio de Janeiro, RJ</span>
@@ -1712,7 +1707,7 @@
           <div class="package-body">
             <h3>Lua de Mel</h3>
             <p>Viagens românticas com hospedagens especiais, experiências memoráveis e clima perfeito para celebrar</p>
-            <a class="btn btn-primary" href="https://wa.me/5519991247894" target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
 
@@ -1721,7 +1716,7 @@
           <div class="package-body">
             <h3>Férias em Família</h3>
             <p>Pacotes pensados para conforto, diversão, segurança e praticidade para todas as idades</p>
-            <a class="btn btn-primary" href="https://wa.me/5519991247894" target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
 
@@ -1730,7 +1725,7 @@
           <div class="package-body">
             <h3>Viagens Internacionais</h3>
             <p>Roteiros para quem deseja conhecer novos países com orientação, planejamento e suporte</p>
-            <a class="btn btn-primary" href="https://wa.me/5519991247894" target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
           </div>
         </article>
       </div>
@@ -1752,7 +1747,7 @@
 
       <div class="contact-wrap">
         <div class="contact-card reveal">
-          <h3>OWERTRAVEL</h3>
+          <h3>OwerTravel</h3>
 
           <div class="contact-item">
             <i class="fa-solid fa-location-dot"></i>
@@ -1766,7 +1761,7 @@
             <i class="fa-brands fa-whatsapp"></i>
             <div>
               <strong>WhatsApp</strong>
-              <a href="https://wa.me/5519991247894" target="_blank" rel="noopener">(19) 99124-7894</a>
+              <a href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20atendimento%20online%20da%20OwerTravel%20para%20planejar%20minha%20pr%C3%B3xima%20viagem." target="_blank" rel="noopener">(19) 99124-7894</a>
             </div>
           </div>
 
@@ -1801,7 +1796,7 @@
     <div class="container reveal">
       <h2>Pronto Para Viver Sua Próxima Experiência?</h2>
       <p>Fale agora com nossa equipe e receba um orçamento personalizado</p>
-      <a class="btn btn-primary" href="https://wa.me/5519991247894" target="_blank" rel="noopener">
+      <a class="btn btn-primary" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">
         <i class="fa-brands fa-whatsapp"></i>
         Solicitar Orçamento
       </a>
@@ -1815,7 +1810,7 @@
         <div>
           <a href="javascript:void(0)" data-scroll="inicio" class="logo">
             <span class="logo-mark"><i class="fa-solid fa-plane-departure"></i></span>
-            <span><strong>OWER</strong>TRAVEL</span>
+            <span><strong>Ower</strong>Travel</span>
           </a>
           <p>
             Agência de viagens especializada em experiências personalizadas, pacotes nacionais,
@@ -1837,8 +1832,8 @@
         <div>
           <h4>Atendimento</h4>
           <div class="footer-links">
-            <a href="https://wa.me/5519991247894" target="_blank" rel="noopener">Solicitar Orçamento</a>
-            <a href="https://wa.me/5519991247894" target="_blank" rel="noopener">Falar com Especialista</a>
+            <a href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener">Solicitar Orçamento</a>
+            <a href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20OwerTravel%20sobre%20uma%20viagem." target="_blank" rel="noopener">Falar com Especialista</a>
             <a href="javascript:void(0)" data-scroll="destinos">Ver destinos</a>
           </div>
 
@@ -1851,14 +1846,14 @@
       </div>
 
       <div class="copyright">
-        <span>© <span id="year"></span> OWERTRAVEL. Todos os direitos reservados.</span>
+        <span>© <span id="year"></span> OwerTravel. Todos os direitos reservados.</span>
         <span>Viagens planejadas com segurança, cuidado e exclusividade.</span>
       </div>
     </div>
   </footer>
 
   <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a class="whatsapp-float" href="https://wa.me/5519991247894" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <a class="whatsapp-float" href="https://wa.me/5519991247894?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20personalizado%20com%20a%20OwerTravel." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
